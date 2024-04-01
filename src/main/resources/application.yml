@@ -1,0 +1,24 @@
+server:
+  servlet:
+    context-path: /api
+  port: 8090
+
+spring:
+  application:
+    name: csi test task
+  datasource:
+    url: jdbc:postgresql://localhost:5432/csi_test_task_db
+    username: postgres
+    password: Shyngysktl123
+    driver-class-name: org.postgresql.Driver
+  jpa:
+    hibernate:
+      ddl-auto: validate
+    show-sql: false
+    properties:
+      hibernate:
+        format_sql: true
+    database: postgresql
+    database-platform: org.hibernate.dialect.PostgreSQLDialect
+  flyway:
+    enabled: true
